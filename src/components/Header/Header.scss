@@ -1,0 +1,50 @@
+.header {
+    padding: 1.5rem 3rem;
+    position: relative;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+
+        &__img {
+            height: 6rem;
+            width: 6rem;
+        }
+
+        &__brand {
+            font-size: 2.5rem;
+            margin-left: 1rem;
+        }
+    }
+
+    &__nav {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+
+        &__link {
+            font-size: 2rem;
+            font-weight: 500;
+            color: grey;
+            text-decoration: none;
+
+            &:link,
+            &:visited,
+            &:hover,
+            &:active {
+                text-decoration: none;
+            }
+
+            &:hover {
+                color: black;
+            }
+
+            &:not(:last-of-type) {
+                margin-right: 3.5rem;
+            }
+        }
+    }
+}
