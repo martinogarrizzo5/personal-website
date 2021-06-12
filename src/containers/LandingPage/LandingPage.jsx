@@ -1,9 +1,11 @@
-import LandingImg from "./drawkit-grape-pack-illustration-2.svg";
-
-import "./LandingPage.scss";
-import projects from "../../projects/projects";
+import { NavLink } from "react-router-dom";
+import { v4 as uuid } from "uuid";
 
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
+
+import LandingImg from "./drawkit-grape-pack-illustration-2.svg";
+import projects from "../../projects/projects";
+import "./LandingPage.scss";
 
 const LandingPage = () => {
   return (
@@ -19,9 +21,9 @@ const LandingPage = () => {
             is my real passion and I'll never stop coding
             <br />
           </p>
-          <a href="/" className="landing__header__cta">
+          <NavLink to="/projects" className="landing__header__cta">
             View Portfolio
-          </a>
+          </NavLink>
         </div>
         <div className="landing__header__section landing__header__section-hero">
           <img
@@ -36,14 +38,14 @@ const LandingPage = () => {
           All the best projects that I made during my journey as a programmer
           are here waiting for you!
         </h2>
-        <div className="projects-grid">
+        <div className="landing__projects__projects-grid">
           {projects.map(project => (
-            <ProjectCard {...project} />
+            <ProjectCard {...project} key={uuid()} />
           ))}
         </div>
-        <a href="/" className="landing__projects__link">
+        <NavLink to="/projects" className="landing__projects__link">
           View All Projects &rarr;
-        </a>
+        </NavLink>
       </div>
     </div>
   );

@@ -1,9 +1,33 @@
-import { NavLink } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
+import { NavLink, withRouter } from "react-router-dom";
+import { v4 as uuid } from "uuid";
 
 import LogoImg from "./logo4.png";
 import "./Header.scss";
 
-const Header = () => {
+const Header = props => {
+  const links = [
+    { name: "Projects", route: "/projects" },
+    { name: "About", route: "/about" },
+    { name: "Contact", route: "/contact" },
+  ];
+  const [isMenuShown, setMenuShown] = useState(false);
+
+  const handleMenuPress = () => {
+    setMenuShown(prevState => !prevState);
+  };
+
+  const prevRouteRef = useRef(null);
+  useEffect(() => {
+    if (prevRouteRef.current == null) {
+      prevRouteRef.current = props.location.pathname;
+    } else {
+      if (props.location.pathname != prevRouteRef.current) {
+        setMenuShown(false);
+      }
+    }
+  }, [props.location]);
+
   return (
     <header className="header">
       <div className="header__logo">
@@ -13,30 +37,41 @@ const Header = () => {
         </NavLink>
       </div>
       <div className="header__nav">
-        <NavLink
-          to="/projects"
-          className="header__nav__link"
-          activeClassName="header__nav__link--active"
-        >
-          Projects
-        </NavLink>
-        <NavLink
-          to="/about"
-          className="header__nav__link"
-          activeClassName="header__nav__link--active"
-        >
-          About
-        </NavLink>
-        <NavLink
-          to="/contact"
-          className="header__nav__link"
-          activeClassName="header__nav__link--active"
-        >
-          Contact
-        </NavLink>
+        {links.map(link => (
+          <NavLink
+            to={link.route}
+            className={`header__nav__link ${
+              isMenuShown
+                ? "header__nav__link__active"
+                : "header__nav__link__inactive"
+            }`}
+            activeClassName="header__nav__link--active"
+            key={uuid()}
+          >
+            {link.name}
+          </NavLink>
+        ))}
       </div>
+      <div
+        className={`header__menu ${
+          isMenuShown ? "header__menu__active" : "header__menu__inactive"
+        }`}
+        onClick={handleMenuPress}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      {isMenuShown ? (
+        <div className="header__back-screen--active">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      ) : null}
     </header>
   );
 };
 
-export default Header;
+export default withRouter(Header);

@@ -1,22 +1,48 @@
 @import "mediaQuery";
+@import "variables";
 
 .landing {
     width: 100%;
+    padding: 0 8rem;
+
+    @include mediaQuery($phone) {
+        padding: 0 4rem;
+    }
+
+    @include mediaQuery($phone-sm) {
+        padding: 0 3rem;
+    }
 
     &__header {
-        padding: 8rem;
+        padding: 8rem 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 5rem;
 
+        @include mediaQuery($tablet) {
+            grid-template-columns: 1fr;
+            gap: 10rem;
+            padding: 8rem 0 4rem;
+        }
+
         $margin: 23rem;
         &__section-title {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
             @include mediaQuery($desktop) {
                 margin-left: $margin;
+            }
+
+            @include mediaQuery($tablet-sm) {
+                text-align: center;
+                align-items: center;
             }
         }
 
         &__section-hero {
+            align-self: center;
             display: flex;
             justify-content: center;
 
@@ -29,6 +55,18 @@
         &__hero {
             display: inline-block;
             height: 50rem;
+
+            @include mediaQuery($laptop) {
+                height: 40rem;
+            }
+
+            @include mediaQuery($phone) {
+                height: 35rem;
+            }
+
+            @include mediaQuery($phone-sm) {
+                height: 30rem;
+            }
         }
 
         &__title {
@@ -36,6 +74,15 @@
             font-weight: 700;
 
             margin: 4rem 0 2rem;
+
+            @include mediaQuery($laptop) {
+                font-size: 4rem;
+                margin: 0 0 2rem;
+            }
+
+            @include mediaQuery($phone) {
+                font-size: 3.5rem;
+            }
         }
 
         &__sub-title {
@@ -44,6 +91,14 @@
             color: var(--sub-title);
 
             margin-bottom: 6rem;
+
+            @include mediaQuery($laptop) {
+                font-size: 2.3rem;
+            }
+
+            @include mediaQuery($phone) {
+                font-size: 2rem;
+            }
         }
 
         &__cta {
@@ -79,7 +134,6 @@
     }
 
     &__projects {
-        padding: 0 8rem;
         margin-top: 10rem;
 
         display: flex;
@@ -99,10 +153,32 @@
             background-clip: text;
         }
 
+        &__projects-grid {
+            max-width: 1300px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5rem;
+            margin: 5rem auto;
+
+            @include mediaQuery($laptop) {
+                grid-template-columns: repeat(4, 1fr);
+                justify-content: center;
+            }
+
+            @include mediaQuery($tablet) {
+                grid-template-columns: 1fr;
+            }
+        }
+
         &__link {
             align-self: center;
+            color: $primary-color;
+            border: 2px solid $primary-color;
+            border-radius: 1.5rem;
+            padding: 1rem 2rem;
 
-            color: #7510f7;
+            transition: all 0.3s;
 
             &:link,
             &:visited,
@@ -112,17 +188,9 @@
             }
 
             &:hover {
-                text-decoration: underline;
+                background-color: $primary-color;
+                color: white;
             }
         }
     }
-}
-
-.projects-grid {
-    max-width: 1300px;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 3rem;
-    margin: 5rem auto;
 }

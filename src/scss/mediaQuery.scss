@@ -1,4 +1,9 @@
 $desktop: 100em;
+$laptop: 75em;
+$tablet: 62.5em;
+$tablet-sm: 50em;
+$phone: 37.5em;
+$phone-sm: 25em;
 
 @mixin mediaQuery($breakpoint) {
     @if $breakpoint == $desktop {

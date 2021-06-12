@@ -1,3 +1,5 @@
+@import "mediaQuery";
+
 *,
 *::after,
 *::before {
@@ -8,6 +10,10 @@
 
 html {
     font-size: 62.5%;
+
+    @include mediaQuery($phone-sm) {
+        font-size: 55%;
+    }
 }
 
 body {

@@ -1,25 +1,36 @@
-.project-card {
-    height: 50rem;
+@import "variables";
+@import "mediaQuery";
 
+.project-card {
     background: white;
     box-shadow: 29px 29px 58px #cecece, -29px -29px 58px #ffffff;
 
     display: flex;
     flex-direction: column;
 
-    &__img-container {
-        position: relative;
-        clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0 85%);
+    ///////////// grid positions setted manually
+    @include mediaQuery($laptop) {
+        grid-column: span 2;
+        &:last-of-type {
+            grid-column: 2 / 4;
+        }
+    }
+    @include mediaQuery($tablet) {
+        grid-column: 1;
+        &:last-of-type {
+            grid-column: 1;
+        }
+    }
+    //////////////
 
+    &__img-container {
+        clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0 85%);
         height: 25rem;
-        z-index: 100;
         filter: brightness(0.9);
     }
 
     &__img {
         display: inline-block;
-        position: relative;
-        z-index: -1;
 
         width: 100%;
         height: 100%;
@@ -34,6 +45,21 @@
         flex-direction: column;
     }
 
+    &__type {
+        display: flex;
+        align-items: center;
+
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        color: $primary-color;
+
+        &__icon {
+            font-size: 1.8rem;
+            margin-right: 0.5rem;
+        }
+    }
+
     &__title {
         font-size: 2.5rem;
         margin-bottom: 1.5rem;
@@ -42,6 +68,7 @@
     &__sub-title {
         flex: 1;
         color: var(--sub-title);
+        margin-bottom: 4rem;
     }
 
     &__link {
