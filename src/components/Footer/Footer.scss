@@ -1,5 +1,20 @@
 .footer {
-    background-color: rgb(70, 70, 70);
+    background-color: #7510f7;
     color: white;
     text-align: center;
+
+    margin-top: 10rem;
+    padding: 1rem;
+
+    &__logo {
+        height: 10rem;
+    }
+
+    &__quote {
+        font-size: 2rem;
+        font-weight: 500;
+        font-family: "Ubuntu", sans-serif;
+
+        margin-bottom: 3rem;
+    }
 }

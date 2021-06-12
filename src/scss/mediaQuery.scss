@@ -1,5 +1,13 @@
+$desktop: 100em;
+
 @mixin mediaQuery($breakpoint) {
-    @media only screen and (max-width: $breakpoint) {
-        @content;
+    @if $breakpoint == $desktop {
+        @media only screen and (min-width: $breakpoint) {
+            @content;
+        }
+    } @else {
+        @media only screen and (max-width: $breakpoint) {
+            @content;
+        }
     }
 }

@@ -8,18 +8,32 @@ const Header = () => {
     <header className="header">
       <div className="header__logo">
         <img src={LogoImg} className="header__logo__img" alt="logo" />
-        <span className="header__logo__brand">MyPortfolio</span>
+        <NavLink to="/" className="header__logo__brand">
+          MyPortfolio
+        </NavLink>
       </div>
       <div className="header__nav">
-        <a href="/" className="header__nav__link">
+        <NavLink
+          to="/projects"
+          className="header__nav__link"
+          activeClassName="header__nav__link--active"
+        >
           Projects
-        </a>
-        <a href="/" className="header__nav__link">
+        </NavLink>
+        <NavLink
+          to="/about"
+          className="header__nav__link"
+          activeClassName="header__nav__link--active"
+        >
           About
-        </a>
-        <a href="/" className="header__nav__link">
+        </NavLink>
+        <NavLink
+          to="/contact"
+          className="header__nav__link"
+          activeClassName="header__nav__link--active"
+        >
           Contact
-        </a>
+        </NavLink>
       </div>
     </header>
   );
