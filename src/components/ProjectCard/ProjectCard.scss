@@ -9,18 +9,18 @@
     flex-direction: column;
 
     ///////////// grid positions setted manually
-    @include mediaQuery($laptop) {
-        grid-column: span 2;
-        &:last-of-type {
-            grid-column: 2 / 4;
-        }
-    }
-    @include mediaQuery($tablet) {
-        grid-column: 1;
-        &:last-of-type {
-            grid-column: 1;
-        }
-    }
+    // @include mediaQuery($laptop) {
+    //     grid-column: span 2;
+    //     &:last-of-type {
+    //         grid-column: 2 / 4;
+    //     }
+    // }
+    // @include mediaQuery($tablet) {
+    //     grid-column: 1;
+    //     &:last-of-type {
+    //         grid-column: 1;
+    //     }
+    // }
     //////////////
 
     &__img-container {

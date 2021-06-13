@@ -2,8 +2,20 @@
 import dreamTravelImg from "./dreamTravelImg.png";
 import getBoringImg from "./getBoringImg.png";
 import simonGameImg from "./simonGameImg.png";
+import catClickerImg from "./catClickerImg.png";
+import pathFindingImg from "./pathFindingImg.png";
+import trackifyImg from "./trackifyImg.png";
+
 // icons
-import { FaPlaneDeparture, FaGamepad, FaClipboardList } from "react-icons/fa";
+import {
+  FaPlaneDeparture,
+  FaGamepad,
+  FaClipboardList,
+  FaCat,
+  FaMapPin,
+} from "react-icons/fa";
+
+import { RiMapPin2Fill } from "react-icons/ri";
 
 const projects = [
   {
@@ -32,6 +44,31 @@ const projects = [
     description:
       "Website version of the famous game where you need to remember the sequence of colors. Here you'll test your memory.",
     link: "https://martinogarrizzo5.github.io/SimonGame/",
+  },
+  {
+    typeIcon: FaCat,
+    type: "Cats",
+    title: "Cat Clicker",
+    imageUrl: catClickerImg,
+    description:
+      "A meaningless website where you can tap on a cat. Tap on it at least 10 times...",
+    link: "https://martinogarrizzo5.github.io/catClicker/",
+  },
+  {
+    typeIcon: RiMapPin2Fill,
+    type: "Path",
+    title: "PathFinder",
+    imageUrl: pathFindingImg,
+    description: "Use algorithms to find the shortest path between two points.",
+    link: "https://martinogarrizzo5.github.io/PathFinding/",
+  },
+  {
+    typeIcon: FaMapPin,
+    type: "Position",
+    title: "Trackify",
+    imageUrl: trackifyImg,
+    description: "Find the position of your public ip address.",
+    link: "https://trackify.web.app/",
   },
 ];
 

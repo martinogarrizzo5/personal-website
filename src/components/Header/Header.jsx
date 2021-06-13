@@ -24,6 +24,7 @@ const Header = props => {
       prevRouteRef.current = props.location.pathname;
     } else {
       if (props.location.pathname !== prevRouteRef.current) {
+        prevRouteRef.current = props.location.pathname;
         setMenuShown(false);
       }
     }

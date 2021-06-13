@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { v4 as uuid } from "uuid";
-
+import PageContainer from "../../utils/PageContainer";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 
 import LandingImg from "./drawkit-grape-pack-illustration-2.svg";
@@ -8,8 +8,10 @@ import projects from "../../projects/projects";
 import "./LandingPage.scss";
 
 const LandingPage = () => {
+  const mainProjects = projects.slice(0, 3);
+
   return (
-    <div className="landing">
+    <PageContainer className="landing">
       <div className="landing__header">
         <div className="landing__header__section landing__header__section-title">
           <h1 className="landing__header__title">
@@ -34,12 +36,12 @@ const LandingPage = () => {
         </div>
       </div>
       <div className="landing__projects">
-        <h2 className="landing__projects__header">
+        <h2 className="landing__projects__header is-title">
           All the best projects that I made during my journey as a programmer
           are here waiting for you!
         </h2>
         <div className="landing__projects__projects-grid">
-          {projects.map(project => (
+          {mainProjects.map(project => (
             <ProjectCard {...project} key={uuid()} />
           ))}
         </div>
@@ -47,7 +49,7 @@ const LandingPage = () => {
           View All Projects &rarr;
         </NavLink>
       </div>
-    </div>
+    </PageContainer>
   );
 };
 

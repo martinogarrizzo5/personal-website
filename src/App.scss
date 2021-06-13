@@ -1,4 +1,5 @@
 @import "mediaQuery";
+@import "typography";
 
 *,
 *::after,
@@ -25,4 +26,12 @@ body {
 
 :root {
     --sub-title: rgb(85, 85, 85);
+}
+
+// set root as flex to put the footer at the bottom of screen when screen isn't scrollable
+// ALWAYS remember to put the content as flex: 1;
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }

@@ -1,0 +1,7 @@
+@import "variables";
+
+.is-title {
+    background-image: linear-gradient(to right, $blue, $violet);
+    color: transparent;
+    background-clip: text;
+}

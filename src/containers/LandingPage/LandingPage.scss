@@ -139,10 +139,6 @@
             font-size: 2.5rem;
             font-weight: bold;
             text-align: center;
-
-            background-image: linear-gradient(to right, $blue, $violet);
-            color: transparent;
-            background-clip: text;
         }
 
         &__projects-grid {
@@ -154,8 +150,7 @@
             margin: 5rem auto;
 
             @include mediaQuery($laptop) {
-                grid-template-columns: repeat(4, 1fr);
-                justify-content: center;
+                grid-template-columns: repeat(2, 1fr);
             }
 
             @include mediaQuery($tablet) {

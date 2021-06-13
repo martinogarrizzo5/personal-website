@@ -1,3 +1,49 @@
+@import "mediaQuery";
+@import "variables";
+
 .portfolio {
     padding: 8rem;
+
+    @include mediaQuery($tablet) {
+        padding: 8rem 5rem;
+    }
+
+    @include mediaQuery($phone) {
+        padding: 8rem 3rem;
+    }
+
+    &__header {
+        text-align: center;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 4rem;
+        margin: 8rem 0;
+
+        @include mediaQuery($laptop-lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include mediaQuery($tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mediaQuery($tablet-sm) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__coming-soon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__text {
+            margin-left: 2rem;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+    }
 }
