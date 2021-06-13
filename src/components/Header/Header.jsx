@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { NavLink, withRouter } from "react-router-dom";
 import { v4 as uuid } from "uuid";
+import { CSSTransition } from "react-transition-group";
 
 import LogoImg from "./logo4.png";
 import "./Header.scss";
@@ -22,7 +23,7 @@ const Header = props => {
     if (prevRouteRef.current == null) {
       prevRouteRef.current = props.location.pathname;
     } else {
-      if (props.location.pathname != prevRouteRef.current) {
+      if (props.location.pathname !== prevRouteRef.current) {
         setMenuShown(false);
       }
     }
@@ -62,14 +63,20 @@ const Header = props => {
         <span></span>
         <span></span>
       </div>
-      {isMenuShown ? (
-        <div className="header__back-screen--active">
+      <CSSTransition
+        in={isMenuShown}
+        timeout={600}
+        classNames="header__back-screen"
+        mountOnEnter
+        unmountOnExit
+      >
+        <div className="header__back-screen-base">
           <span></span>
           <span></span>
           <span></span>
           <span></span>
         </div>
-      ) : null}
+      </CSSTransition>
     </header>
   );
 };

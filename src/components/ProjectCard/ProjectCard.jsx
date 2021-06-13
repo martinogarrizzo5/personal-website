@@ -14,7 +14,7 @@ const projectCard = props => {
         <h3 className="project-card__title">{props.title}</h3>
         <p className="project-card__sub-title">{props.description}</p>
 
-        <a className="project-card__link" href="/">
+        <a className="project-card__link" href={props.link}>
           See More
         </a>
       </div>

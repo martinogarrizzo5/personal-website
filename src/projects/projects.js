@@ -13,7 +13,7 @@ const projects = [
     imageUrl: dreamTravelImg,
     description:
       "Find activities and hotels int the most beautiful places in the world and live experiences that you'll never forget.",
-    link: "",
+    link: "https://dream-travel.herokuapp.com/",
   },
   {
     typeIcon: FaClipboardList,
@@ -22,7 +22,7 @@ const projects = [
     imageUrl: getBoringImg,
     description:
       "Are you bored? No worries, here you'll find new interesting activities to do every time you need.",
-    link: "",
+    link: "https://get-boring.herokuapp.com/",
   },
   {
     typeIcon: FaGamepad,
@@ -31,7 +31,7 @@ const projects = [
     imageUrl: simonGameImg,
     description:
       "Website version of the famous game where you need to remember the sequence of colors. Here you'll test your memory.",
-    link: "",
+    link: "https://martinogarrizzo5.github.io/SimonGame/",
   },
 ];
 

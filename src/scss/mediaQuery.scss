@@ -3,6 +3,7 @@ $laptop: 75em;
 $tablet: 62.5em;
 $tablet-sm: 50em;
 $phone: 37.5em;
+$phone-md: 28.125em;
 $phone-sm: 25em;
 
 @mixin mediaQuery($breakpoint) {

@@ -6,6 +6,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -19,8 +21,6 @@ html {
 body {
     font-size: 1.6rem;
     font-family: "Inter", sans-serif;
-
-    min-height: 100vh;
 }
 
 :root {
