@@ -1,5 +1,4 @@
 import { SiJavascript, SiDart, SiPython, SiCss3 } from "react-icons/si";
-import { FaDatabase } from "react-icons/fa";
 
 const skills = [
   {

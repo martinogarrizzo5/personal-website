@@ -1,11 +1,12 @@
-$desktop: 100em;
-$laptop-lg: 87.5em;
-$laptop: 75em;
-$tablet: 62.5em;
-$tablet-sm: 50em;
-$phone: 37.5em;
-$phone-md: 28.125em;
-$phone-sm: 25em;
+$desktop: 100em; // 1600px
+$laptop-lg: 87.5em; // 1400px
+$laptop: 75em; // 1200px
+$tablet: 62.5em; // 1000px
+$tablet-sm: 50em; // 800px
+$tablet-xs: 43.75em;
+$phone: 37.5em; // 600px
+$phone-md: 28.125em; // 450px
+$phone-sm: 25em; // 400px
 
 @mixin mediaQuery($breakpoint) {
     @if $breakpoint == $desktop {

@@ -1,3 +1,17 @@
 .contact {
     padding: 8rem;
+
+    &__header {
+        font-size: 4rem;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    &__form {
+        max-width: 50rem;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
