@@ -1,5 +1,12 @@
+@import "variables";
+@import "mediaQuery";
+
 .contact {
     padding: 8rem;
+
+    @include mediaQuery($phone) {
+        padding: 4rem;
+    }
 
     &__header {
         font-size: 4rem;
@@ -8,10 +15,78 @@
     }
 
     &__form {
-        max-width: 50rem;
-        margin: 0 auto;
+        max-width: 60rem;
+        margin: 10rem auto 0;
 
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 3rem 2rem;
+
+        @include mediaQuery($tablet) {
+            width: 100%;
+        }
+
+        @include mediaQuery($phone) {
+            grid-template-columns: 1fr;
+        }
+
+        &__section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__label {
+            margin-bottom: 0.4rem;
+            color: $sub-title;
+        }
+
+        &__input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            font-size: 1.8rem;
+            font-family: "Inter", sans-serif;
+
+            outline: none;
+            border-radius: 0;
+            border: 1px solid rgb(116, 116, 116);
+        }
+
+        &__select {
+            grid-column: 1 / -1;
+        }
+
+        &__text-area-section {
+            grid-column: 1 / -1;
+
+            &__text-area {
+                resize: vertical;
+                min-height: 10rem;
+            }
+        }
+
+        &__submit-btn {
+            grid-column: 1 / -1;
+            justify-self: center;
+
+            outline: none;
+            background-color: transparent;
+            color: $primary-color;
+
+            font-size: 1.8rem;
+
+            border: 2px solid $primary-color;
+            border-radius: 3rem;
+            padding: 1.2rem 5rem;
+            margin-top: 2rem;
+
+            transition: all 0.3s;
+
+            cursor: pointer;
+
+            &:hover {
+                background-color: $primary-color;
+                color: white;
+            }
+        }
     }
 }

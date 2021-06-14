@@ -1,5 +1,6 @@
 import PageContainer from "../../utils/PageContainer";
 import { IoMdPin, IoMdMail } from "react-icons/io";
+import { v4 as uuid } from "uuid";
 import skills from "./skills";
 import manImg from "./man.jpg";
 import "./AboutPage.scss";
@@ -8,17 +9,17 @@ const AboutPage = () => {
   return (
     <PageContainer className="about">
       <div className="about__biography">
-        <figcaption className="about__biography__img-section">
+        <figure className="about__biography__img-section">
           <img src={manImg} alt="my-self" className="about__biography__img" />
-          <caption className="about__biography__img__caption">
+          <figcaption className="about__biography__img__caption">
             <p className="about__biography__img__caption__name is-title">
               Martin Meneghetti
             </p>
             <p className="about__biography__img__caption__job">
               High School Student
             </p>
-          </caption>
-        </figcaption>
+          </figcaption>
+        </figure>
         <div className="about__biography__description">
           <div className="about__biography__description__section">
             <h3 className="about__biography__description__header">
@@ -42,7 +43,7 @@ const AboutPage = () => {
               algorithms and data structures thankfully to its simple sintax. In
               the last months I approached mobile app development with Flutter
               and I enjoyed it! I also participated in the Italian Computer
-              Science Olympics 2021 arriving 179° over 1983 people
+              Science Olympics 2021 arriving 179° over 1983 people.
             </p>
           </div>
           <div className="about__biography__description__section about__biography__general-info">
@@ -65,7 +66,7 @@ const AboutPage = () => {
         <h2 className="about__skills__header">Skills</h2>
         <div className="about__skills-grid">
           {skills.map(skill => (
-            <div className="about__skills-grid__skill">
+            <div className="about__skills-grid__skill" key={uuid()}>
               <skill.icon className="about__skills-grid__skill__icon" />
               <h3 className="about__skills-grid__skill__title">
                 {skill.language}
