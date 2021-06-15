@@ -25,6 +25,10 @@
             padding: 8rem 0 4rem;
         }
 
+        @include mediaQuery($phone) {
+            padding: 8rem 0 0;
+        }
+
         $margin: 23rem;
         &__section-title {
             display: flex;

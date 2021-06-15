@@ -18,6 +18,10 @@
         @include mediaQuery($tablet) {
             grid-template-columns: 1fr;
             padding: 5rem;
+            margin-bottom: 3rem;
+        }
+
+        @include mediaQuery($phone) {
         }
 
         @include mediaQuery($phone) {
@@ -63,7 +67,7 @@
                 }
 
                 &:not(:last-of-type) {
-                    margin-bottom: 4rem;
+                    margin-bottom: 3.5rem;
                 }
             }
             &__header {

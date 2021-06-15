@@ -1,4 +1,5 @@
 @import "variables";
+@import "mediaQuery";
 
 .footer {
     background-color: $primary-color;
@@ -7,6 +8,10 @@
 
     margin-top: 10rem;
     padding: 1rem;
+
+    @include mediaQuery($phone) {
+        margin-top: 5rem;
+    }
 
     &__logo {
         height: 10rem;
