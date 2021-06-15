@@ -26,6 +26,11 @@ const Select = props => {
     };
   }, []);
 
+  useEffect(() => {
+    const event = { target: { name: props.name, value: selectedValue } };
+    props.onChange(event);
+  }, [selectedValue]);
+
   // close and open dropdown
   const handleDropdown = () => {
     setDropdownShown(prevState => !prevState);

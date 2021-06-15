@@ -12,6 +12,11 @@
         font-size: 4rem;
         font-weight: 300;
         text-align: center;
+
+        @include mediaQuery($phone-sm) {
+            font-size: 3.5rem;
+            margin-top: 2.5rem;
+        }
     }
 
     &__form {
@@ -28,6 +33,7 @@
 
         @include mediaQuery($phone) {
             grid-template-columns: 1fr;
+            margin: 5rem auto 0;
         }
 
         &__section {
@@ -87,6 +93,33 @@
                 background-color: $primary-color;
                 color: white;
             }
+        }
+    }
+
+    &__notification {
+        padding-top: 2rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+
+        &__title {
+            font-size: 4rem;
+            font-family: "Montserrat Alternates", sans-serif;
+        }
+
+        &__sub-title {
+            font-size: 2rem;
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 300;
+        }
+
+        &__img {
+            height: 50rem;
+            width: auto;
         }
     }
 }
