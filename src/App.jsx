@@ -3,12 +3,13 @@ import { Route, Switch } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import Header from "./components/Header/Header";
-import LandingPage from "./containers/LandingPage/LandingPage";
+
 import LazyComponent from "./utils/lazyComponent";
 import ScrollToTop from "./utils/scrollToTop";
 
 import "./App.scss";
 
+const LandingPage = lazy(() => import("./containers/LandingPage/LandingPage"));
 const PortfolioPage = lazy(() =>
   import("./containers/PortfolioPage/PortfolioPage")
 );
@@ -22,7 +23,11 @@ const App = () => {
       <Header />
       <AnimatePresence exitBeforeEnter>
         <Switch key="alpha">
-          <Route path="/" exact component={LandingPage} />
+          <Route
+            path="/"
+            exact
+            render={() => <LazyComponent item={<LandingPage />} />}
+          />
           <Route
             path="/projects"
             exact

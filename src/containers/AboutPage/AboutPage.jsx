@@ -50,13 +50,17 @@ const AboutPage = () => {
             <div className="about__biography__general-info__others">
               <IoMdPin className="about__biography__general-info__others__icon" />
               <span className="about__biography__general-info__others__text">
-                Castelfranco Veneto, Italy
+                <a href="https://www.google.it/maps/place/31033+Castelfranco+Veneto+TV/@45.6737041,11.914747,14z/data=!3m1!4b1!4m5!3m4!1s0x4779294589009f9f:0x4e474375fd2eeb08!8m2!3d45.6716942!4d11.9282388">
+                  Castelfranco Veneto, Italy
+                </a>
               </span>
             </div>
             <div className="about__biography__general-info__others">
               <IoMdMail className="about__biography__general-info__others__icon" />
               <span className="about__biography__general-info__others__text">
-                martinmeneghetti1@gmail.com
+                <a href="mailto:martinmeneghetti1@gmail.com">
+                  martinmeneghetti1@gmail.com
+                </a>
               </span>
             </div>
           </div>

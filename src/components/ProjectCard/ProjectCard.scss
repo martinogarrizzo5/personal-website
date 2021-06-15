@@ -3,28 +3,13 @@
 
 .project-card {
     background: white;
-    box-shadow: 29px 29px 58px #cecece, -29px -29px 58px #ffffff;
+    box-shadow: 29px 29px 58px #cecece;
 
     display: flex;
     flex-direction: column;
 
-    ///////////// grid positions setted manually
-    // @include mediaQuery($laptop) {
-    //     grid-column: span 2;
-    //     &:last-of-type {
-    //         grid-column: 2 / 4;
-    //     }
-    // }
-    // @include mediaQuery($tablet) {
-    //     grid-column: 1;
-    //     &:last-of-type {
-    //         grid-column: 1;
-    //     }
-    // }
-    //////////////
-
     &__img-container {
-        clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0 85%);
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
         height: 25rem;
         filter: brightness(0.9);
     }

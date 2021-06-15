@@ -40,18 +40,39 @@
             position: fixed;
             z-index: 1000;
             flex-direction: column;
+            align-items: stretch;
+            text-align: center;
             height: 50%;
             justify-content: space-around;
         }
 
         &__link {
+            display: flex;
+            align-items: center;
+
             font-size: 2rem;
             font-weight: 500;
             color: grey;
             text-decoration: none;
 
+            transition: all 0.3s;
+
+            span {
+                margin-left: 0.5rem;
+
+                @include mediaQuery($tablet) {
+                    margin-left: 1rem;
+                }
+            }
+
+            &:hover {
+                color: $primary-color !important;
+                background-color: white;
+            }
+
             &--active {
-                color: black;
+                color: $primary-color !important;
+                background-color: white !important;
             }
 
             @include mediaQuery($tablet) {
@@ -82,7 +103,7 @@
             /// when menu icon is visible
             &__active {
                 color: white;
-                display: inline-block;
+                padding: 1rem 2rem;
             }
             &__inactive {
                 @include mediaQuery($tablet) {

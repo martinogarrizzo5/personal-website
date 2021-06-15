@@ -3,7 +3,11 @@ import Select from "../../components/Select/Select";
 import "./ContactPage.scss";
 
 const ContactPage = () => {
-  const interestOptions = ["Collaboration", "Meet", "Work"];
+  const interestOptions = [
+    "Work together",
+    "Just say hello!",
+    "Drink a coffee together",
+  ];
 
   return (
     <PageContainer className="contact">

@@ -3,14 +3,19 @@ import { NavLink, withRouter } from "react-router-dom";
 import { v4 as uuid } from "uuid";
 import { CSSTransition } from "react-transition-group";
 
+import { AiOutlineHome, AiOutlineMessage } from "react-icons/ai";
+import { BiCodeAlt, BiMessageAlt } from "react-icons/bi";
+import { BsPerson } from "react-icons/bs";
+
 import LogoImg from "./logo4.png";
 import "./Header.scss";
 
 const Header = props => {
   const links = [
-    { name: "Projects", route: "/projects" },
-    { name: "About", route: "/about" },
-    { name: "Contact", route: "/contact" },
+    { name: "Home", route: "/", icon: AiOutlineHome },
+    { name: "Projects", route: "/projects", icon: BiCodeAlt },
+    { name: "About", route: "/about", icon: BsPerson },
+    { name: "Contact", route: "/contact", icon: BiMessageAlt },
   ];
   const [isMenuShown, setMenuShown] = useState(false);
 
@@ -23,10 +28,8 @@ const Header = props => {
     if (prevRouteRef.current == null) {
       prevRouteRef.current = props.location.pathname;
     } else {
-      if (props.location.pathname !== prevRouteRef.current) {
-        prevRouteRef.current = props.location.pathname;
-        setMenuShown(false);
-      }
+      prevRouteRef.current = props.location.pathname;
+      setMenuShown(false);
     }
   }, [props.location]);
 
@@ -41,6 +44,7 @@ const Header = props => {
       <div className="header__nav">
         {links.map(link => (
           <NavLink
+            exact
             to={link.route}
             className={`header__nav__link ${
               isMenuShown
@@ -50,7 +54,8 @@ const Header = props => {
             activeClassName="header__nav__link--active"
             key={uuid()}
           >
-            {link.name}
+            {<link.icon />}
+            <span>{link.name}</span>
           </NavLink>
         ))}
       </div>
