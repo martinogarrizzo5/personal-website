@@ -1,7 +1,8 @@
+import { FC } from "react";
 import "./Footer.scss";
 import LogoWhite from "./logo-white.png";
 
-const Footer = () => {
+const Footer: FC = () => {
   return (
     <div className="footer">
       <div>

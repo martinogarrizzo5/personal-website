@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { NavLink } from "react-router-dom";
 import { v4 as uuid } from "uuid";
 import PageContainer from "../../utils/PageContainer";
@@ -7,7 +8,7 @@ import LandingImg from "./drawkit-grape-pack-illustration-2.svg";
 import projects from "../../projects/projects";
 import "./LandingPage.scss";
 
-const LandingPage = () => {
+const LandingPage: FC = () => {
   const mainProjects = projects.slice(0, 3);
 
   return (

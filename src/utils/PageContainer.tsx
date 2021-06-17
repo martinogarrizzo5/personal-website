@@ -1,8 +1,12 @@
-import { Fragment } from "react";
+import { Fragment, FC } from "react";
 import { motion } from "framer-motion";
 import Footer from "../components/Footer/Footer";
 
-const PageContainer = props => {
+interface PageContainerProps {
+  className: string;
+}
+
+const PageContainer: FC<PageContainerProps> = props => {
   return (
     <Fragment>
       <motion.div

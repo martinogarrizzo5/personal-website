@@ -7,6 +7,7 @@ import pathFindingImg from "./pathFindingImg.png";
 import trackifyImg from "./trackifyImg.png";
 
 // icons
+import { IconType } from "react-icons";
 import {
   FaPlaneDeparture,
   FaGamepad,
@@ -14,10 +15,18 @@ import {
   FaCat,
   FaMapPin,
 } from "react-icons/fa";
-
 import { RiMapPin2Fill } from "react-icons/ri";
 
-const projects = [
+type Project = {
+  typeIcon: IconType;
+  type: string;
+  title: string;
+  imageUrl: string;
+  description: string;
+  link: string;
+};
+
+const projects: Project[] = [
   {
     typeIcon: FaPlaneDeparture,
     type: "Trip",

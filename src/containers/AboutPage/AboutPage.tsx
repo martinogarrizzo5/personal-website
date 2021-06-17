@@ -1,11 +1,19 @@
+// libraries
+import { FC } from "react";
+import { v4 as uuid } from "uuid";
+
+// components
 import PageContainer from "../../utils/PageContainer";
 import { IoMdPin, IoMdMail } from "react-icons/io";
-import { v4 as uuid } from "uuid";
+
+// images
 import skills from "./skills";
 import manImg from "./man.jpg";
+
+// styles
 import "./AboutPage.scss";
 
-const AboutPage = () => {
+const AboutPage: FC = () => {
   return (
     <PageContainer className="about">
       <div className="about__biography">

@@ -1,29 +1,33 @@
-import { useState, useEffect, useRef } from "react";
-import { NavLink, withRouter } from "react-router-dom";
+// libraries
+import { useState, useEffect, useRef, FC } from "react";
+import { NavLink, withRouter, RouteComponentProps } from "react-router-dom";
 import { v4 as uuid } from "uuid";
 import { CSSTransition } from "react-transition-group";
-
-import { AiOutlineHome, AiOutlineMessage } from "react-icons/ai";
+// icons
+import { AiOutlineHome } from "react-icons/ai";
 import { BiCodeAlt, BiMessageAlt } from "react-icons/bi";
 import { BsPerson } from "react-icons/bs";
-
+// images
 import LogoImg from "./logo4.png";
+// styles
 import "./Header.scss";
 
-const Header = props => {
+interface HeaderProps extends RouteComponentProps {}
+
+const Header: FC<HeaderProps> = props => {
   const links = [
     { name: "Home", route: "/", icon: AiOutlineHome },
     { name: "Projects", route: "/projects", icon: BiCodeAlt },
     { name: "About", route: "/about", icon: BsPerson },
     { name: "Contact", route: "/contact", icon: BiMessageAlt },
   ];
-  const [isMenuShown, setMenuShown] = useState(false);
+  const [isMenuShown, setMenuShown] = useState<boolean>(false);
 
   const handleMenuPress = () => {
     setMenuShown(prevState => !prevState);
   };
 
-  const prevRouteRef = useRef(null);
+  const prevRouteRef = useRef<string | null>(null);
   useEffect(() => {
     if (prevRouteRef.current == null) {
       prevRouteRef.current = props.location.pathname;

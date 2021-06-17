@@ -2,7 +2,7 @@
     "arrowParens": "avoid",
     "tabWidth": 4,
     "overrides": [{
-        "files": ["*.js", "*.jsx"],
+        "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
         "options": {
             "tabWidth": 2
         }

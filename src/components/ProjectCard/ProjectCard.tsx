@@ -1,6 +1,17 @@
+import { FC } from "react";
+import { IconType } from "react-icons";
 import "./ProjectCard.scss";
 
-const projectCard = props => {
+interface ProjectCardProps {
+  imageUrl: string,
+  title: string,
+  description: string,
+  link: string
+  type: string,
+  typeIcon: IconType,
+}
+
+const projectCard: FC<ProjectCardProps> = props => {
   return (
     <div className="project-card">
       <div className="project-card__img-container">

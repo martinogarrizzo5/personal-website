@@ -1,49 +1,53 @@
-import { useState, useEffect } from "react";
+import { FC } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { v4 as uuid } from "uuid";
 
 import "./Select.scss";
 
-const Select = props => {
+interface SelectProps {
+  name: string;
+  onChange: (event: any) => void;
+  options: string[];
+  id: string;
+}
+
+const Select: FC<SelectProps> = props => {
   // state
-  const [selectedValue, changeSelectedValue] = useState("None");
-  const [isDropdownShown, setDropdownShown] = useState(false);
+  const [selectedValue, changeSelectedValue] = useState<string>("None");
+  const [isDropdownShown, setDropdownShown] = useState<boolean>(false);
 
   // function to close dropdown when clicking outside
-  const handleClickOutside = e => {
+  const handleClickOutside = useCallback((e: any) => {
     const targetClassName = e.target.className.toString();
     if (!targetClassName.includes("dropdown")) {
       setDropdownShown(false);
     }
-  };
-
+  }, []);
   useEffect(() => {
     // add the click listener when component is mounted
-    document.addEventListener("click", handleClickOutside);
-
+    document.addEventListener("click", e => handleClickOutside(e));
+    console.log("click listener added");
     // when component un-mount the click listener is removed
     return () => {
-      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("click", e => handleClickOutside(e));
     };
-  }, []);
-
+  }, [handleClickOutside]);
   useEffect(() => {
     const event = { target: { name: props.name, value: selectedValue } };
     props.onChange(event);
   }, [selectedValue]);
 
   // close and open dropdown
-  const handleDropdown = () => {
+  const handleDropdown = useCallback(() => {
     setDropdownShown(prevState => !prevState);
-  };
+  }, []);
 
   // change value of input field
-  const handleSelectionChange = e => {
+  const handleSelectionChange = (e: any) => {
     const selection = e.target.innerHTML;
     changeSelectedValue(selection);
     setDropdownShown(false);
   };
-
-  const selections = props.options;
 
   return (
     <div className="dropdown">
@@ -62,13 +66,13 @@ const Select = props => {
       </div>
       {isDropdownShown ? (
         <div className="dropdown__list">
-          {selections.map(selection => (
+          {props.options.map((option: any) => (
             <div
               className="dropdown__list__item"
               onClick={handleSelectionChange}
               key={uuid()}
             >
-              {selection}
+              {option}
             </div>
           ))}
         </div>

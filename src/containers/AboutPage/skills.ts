@@ -1,6 +1,13 @@
 import { SiJavascript, SiDart, SiPython, SiCss3 } from "react-icons/si";
+import { IconType } from "react-icons";
 
-const skills = [
+type Skill = {
+  icon: IconType;
+  language: string;
+  technologies: string;
+};
+
+const skills: Skill[] = [
   {
     icon: SiCss3,
     language: "CSS",

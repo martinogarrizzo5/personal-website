@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 import firebase from "../../firebase";
 
-import ThanksImg from "./thanks-2.png";
+import ThanksImg from "./thanks.png";
 import PageContainer from "../../utils/PageContainer";
 import Select from "../../components/Select/Select";
 
@@ -17,10 +17,18 @@ const ContactPage = () => {
     details: null,
   });
 
-  const [isMessageSentSuccessfully, setMessageSentSuccessfully] =
-    useState(false);
+  const interestOptions: string[] = [
+    "Work together",
+    "Just say hello!",
+    "Drink a coffee together",
+  ];
 
-  const handleFormValues = e => {
+  const [isMessageSentSuccessfully, setMessageSentSuccessfully] =
+    useState<boolean>(false);
+
+  const handleFormValues = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const newVal = e.target.value;
     const propName = e.target.name;
 
@@ -31,14 +39,16 @@ const ContactPage = () => {
   };
 
   const storeMessage = async () => {
-    let isRequestValid = true;
+    let isRequestValid: boolean = true;
     try {
-      await contactMessagesDB.add({
+      const newDocument = {
         name: formValues.name,
         email: formValues.email,
         interest: formValues.interest,
         details: formValues.details,
-      });
+      };
+
+      await contactMessagesDB.add(newDocument);
     } catch {
       isRequestValid = false;
     }
@@ -46,31 +56,24 @@ const ContactPage = () => {
     if (isRequestValid) setMessageSentSuccessfully(true);
   };
 
-  const submitForm = e => {
+  const submitForm = (e: FormEvent) => {
     e.preventDefault();
     storeMessage();
   };
-
-  const interestOptions = [
-    "Work together",
-    "Just say hello!",
-    "Drink a coffee together",
-  ];
 
   const notification = (
     <div className="contact__notification">
       <h3 className="contact__notification__title is-title">
         You Are The Best!
       </h3>
-
       <img
         src={ThanksImg}
         alt="thanks-img"
         className="contact__notification__img"
       />
       <h5 className="contact__notification__sub-title">
-        I received your message and I'll answer to all your questions as soon as
-        possible. Thanks!
+        I've received your message and I'll answer to all your questions as soon
+        as possible. Thanks!
       </h5>
     </div>
   );
@@ -122,7 +125,6 @@ const ContactPage = () => {
           <label
             htmlFor="details"
             id="details"
-            name="details"
             className="contact__form__label"
           >
             Additional Details
