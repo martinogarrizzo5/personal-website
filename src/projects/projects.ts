@@ -5,6 +5,7 @@ import simonGameImg from "./simonGameImg.png";
 import catClickerImg from "./catClickerImg.png";
 import pathFindingImg from "./pathFindingImg.png";
 import trackifyImg from "./trackifyImg.png";
+import sharelogicsImg from "./sharelogicsImg.png";
 
 // icons
 import { IconType } from "react-icons";
@@ -14,6 +15,7 @@ import {
   FaClipboardList,
   FaCat,
   FaMapPin,
+  FaBook,
 } from "react-icons/fa";
 import { RiMapPin2Fill } from "react-icons/ri";
 
@@ -76,8 +78,18 @@ const projects: Project[] = [
     type: "Position",
     title: "Trackify",
     imageUrl: trackifyImg,
-    description: "Find the position of your public ip address.",
+    description:
+      "Find the position of your public ip address. Don't worry it's all legal!",
     link: "https://trackify.web.app/",
+  },
+  {
+    typeIcon: FaBook,
+    type: "Learning",
+    title: "Sharelogics Academy",
+    imageUrl: sharelogicsImg,
+    description:
+      "Want to learn programming but don't know where to start? In my academy you'll get all the knowledge you need to become a skilled coder.",
+    link: "https://martin-meneghetti.herokuapp.com/",
   },
 ];
 

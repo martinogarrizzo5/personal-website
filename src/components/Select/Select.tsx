@@ -59,7 +59,6 @@ const Select: FC<SelectProps> = props => {
         value={selectedValue}
         readOnly
       />
-
       <div className="dropdown__select" onClick={handleDropdown}>
         <span className="dropdown__text">{selectedValue}</span>
         <span className="dropdown__icon"></span>
