@@ -4,7 +4,7 @@ import { v4 as uuid } from "uuid";
 import PageContainer from "../../utils/PageContainer";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 
-import LandingImg from "./drawkit-grape-pack-illustration-2.svg";
+import heroImg from "./hero.svg";
 import projects from "../../projects/projects";
 import "./LandingPage.scss";
 
@@ -30,7 +30,7 @@ const LandingPage: FC = () => {
         </div>
         <div className="landing__header__section landing__header__section-hero">
           <img
-            src={LandingImg}
+            src={heroImg}
             alt="me-at-work"
             className="landing__header__hero"
           />

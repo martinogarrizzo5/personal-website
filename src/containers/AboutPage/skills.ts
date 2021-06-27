@@ -16,7 +16,7 @@ const skills: Skill[] = [
   {
     icon: SiJavascript,
     language: "Javascript",
-    technologies: "MERN Stack",
+    technologies: "MERN Stack, Typescript",
   },
   {
     icon: SiDart,

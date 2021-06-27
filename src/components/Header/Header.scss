@@ -72,7 +72,9 @@
 
             &--active {
                 color: $primary-color !important;
-                background-color: white !important;
+                @include mediaQuery($tablet) {
+                    background-color: white !important;
+                }
             }
 
             @include mediaQuery($tablet) {

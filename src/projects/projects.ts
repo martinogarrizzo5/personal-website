@@ -6,6 +6,7 @@ import catClickerImg from "./catClickerImg.png";
 import pathFindingImg from "./pathFindingImg.png";
 import trackifyImg from "./trackifyImg.png";
 import sharelogicsImg from "./sharelogicsImg.png";
+import trisImg from "./trisImg.png";
 
 // icons
 import { IconType } from "react-icons";
@@ -90,6 +91,14 @@ const projects: Project[] = [
     description:
       "Want to learn programming but don't know where to start? In my academy you'll get all the knowledge you need to become a skilled coder.",
     link: "https://martin-meneghetti.herokuapp.com/",
+  },
+  {
+    typeIcon: FaGamepad,
+    type: "Cringe Fun",
+    title: "Tic Tac Toe!",
+    imageUrl: trisImg,
+    description: "Defeat the death in the ultimate challenge. ⚠️Cringe Alert!",
+    link: "https://martinogarrizzo5.github.io/tic-tac-toe/",
   },
 ];
 
