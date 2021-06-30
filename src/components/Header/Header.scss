@@ -41,7 +41,6 @@
             z-index: 1000;
             flex-direction: column;
             align-items: stretch;
-            text-align: center;
             height: 50%;
             justify-content: space-around;
         }
@@ -58,13 +57,25 @@
             transition: all 0.3s;
 
             span {
+                flex: 1;
                 margin-left: 0.5rem;
 
                 @include mediaQuery($tablet) {
-                    margin-left: 1rem;
+                    font-size: 3rem;
+                    margin-left: 1.2rem;
+
+                    font-weight: bold;
+                    letter-spacing: 0.2rem;
+                    line-height: 2.6rem; // temporary fix for heigher height of  nav links
                 }
             }
 
+            &:link,
+            &:visited,
+            &:hover,
+            &:active {
+                text-decoration: none;
+            }
             &:hover {
                 color: $primary-color !important;
                 background-color: white;
@@ -77,24 +88,6 @@
                 }
             }
 
-            @include mediaQuery($tablet) {
-                color: black;
-                font-size: 2.5rem;
-                font-weight: bold;
-                letter-spacing: 0.2rem;
-            }
-
-            &:link,
-            &:visited,
-            &:hover,
-            &:active {
-                text-decoration: none;
-            }
-
-            &:hover {
-                color: black;
-            }
-
             &:not(:last-of-type) {
                 margin-right: 3.5rem;
                 @include mediaQuery($tablet) {
@@ -105,11 +98,17 @@
             /// when menu icon is visible
             &__active {
                 color: white;
-                padding: 1rem 2rem;
+                padding: 1.5rem 2.5rem;
             }
             &__inactive {
                 @include mediaQuery($tablet) {
                     display: none;
+                }
+            }
+
+            &__icon {
+                @include mediaQuery($tablet) {
+                    font-size: 2.8rem;
                 }
             }
         }

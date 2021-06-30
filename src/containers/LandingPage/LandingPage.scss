@@ -9,8 +9,8 @@
         padding: 0 4rem;
     }
 
-    @include mediaQuery($phone-sm) {
-        padding: 0 3rem;
+    @include mediaQuery($phone-md) {
+        padding: 0 2.5rem;
     }
 
     &__header {
@@ -26,7 +26,13 @@
         }
 
         @include mediaQuery($phone) {
-            padding: 8rem 0 0;
+            padding: 6rem 0 0;
+            gap: 6rem;
+        }
+
+        @include mediaQuery($phone-sm) {
+            padding: 5rem 0 0;
+            gap: 5rem;
         }
 
         $margin: 23rem;
@@ -138,6 +144,14 @@
 
         display: flex;
         flex-direction: column;
+
+        @include mediaQuery($phone) {
+            margin-top: 7rem;
+        }
+
+        @include mediaQuery($phone-sm) {
+            margin-top: 5rem;
+        }
 
         &__header {
             font-size: 2.5rem;

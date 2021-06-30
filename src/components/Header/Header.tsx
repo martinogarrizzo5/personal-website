@@ -58,7 +58,7 @@ const Header: FC<HeaderProps> = props => {
             activeClassName="header__nav__link--active"
             key={uuid()}
           >
-            {<link.icon />}
+            <link.icon className="header__nav__link__icon" />
             <span>{link.name}</span>
           </NavLink>
         ))}

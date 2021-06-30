@@ -22,10 +22,11 @@
         }
 
         @include mediaQuery($phone) {
+            padding: 3rem;
         }
 
-        @include mediaQuery($phone) {
-            padding: 3rem;
+        @include mediaQuery($phone-md) {
+            padding: 2.5rem;
         }
 
         &__img-section {

@@ -14,8 +14,12 @@
 html {
     font-size: 62.5%;
 
+    @include mediaQuery($phone) {
+        font-size: 58%;
+    }
+
     @include mediaQuery($phone-sm) {
-        font-size: 55%;
+        font-size: 53%;
     }
 }
 
