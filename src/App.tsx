@@ -1,5 +1,5 @@
 // libraries
-import { lazy, FC } from "react";
+import { lazy, FC, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
@@ -7,6 +7,11 @@ import { AnimatePresence } from "framer-motion";
 import Header from "./components/Header/Header";
 import LazyComponent from "./utils/lazyComponent";
 import ScrollToTop from "./utils/scrollToTop";
+import {
+  Themes,
+  handleThemeChange,
+  useUserThemePreference,
+} from "./utils/themeManagement";
 
 // styles
 import "./App.scss";
@@ -21,9 +26,17 @@ const ContactPage = lazy(() => import("./containers/ContactPage/ContactPage"));
 
 // N.B! Footer already included in PageContainer
 const App: FC = () => {
+  const [theme, setTheme] = useState<Themes>(useUserThemePreference());
+  handleThemeChange(theme);
+
+  const changeTheme = (theme: Themes) => {
+    setTheme(theme);
+  };
+
   return (
     <ScrollToTop>
-      <Header />
+      {/* <ThemeSwitcher changeTheme={changeTheme} theme={theme} /> */}
+      <Header changeTheme={changeTheme} theme={theme} />
       <AnimatePresence exitBeforeEnter>
         <Switch key="alpha">
           <Route
@@ -44,7 +57,9 @@ const App: FC = () => {
           <Route
             path="/contact"
             exact
-            render={() => <LazyComponent item={<ContactPage />} />}
+            render={() => (
+              <LazyComponent item={<ContactPage theme={theme} />} />
+            )}
           />
         </Switch>
       </AnimatePresence>

@@ -26,7 +26,7 @@ const Select: FC<SelectProps> = props => {
   useEffect(() => {
     // add the click listener when component is mounted
     document.addEventListener("click", e => handleClickOutside(e));
-    console.log("click listener added");
+
     // when component un-mount the click listener is removed
     return () => {
       document.removeEventListener("click", e => handleClickOutside(e));

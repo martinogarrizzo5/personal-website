@@ -11,8 +11,13 @@ import { BsPerson } from "react-icons/bs";
 import LogoImg from "./logo4.png";
 // styles
 import "./Header.scss";
+import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
+import { Themes } from "../../utils/themeManagement";
 
-interface HeaderProps extends RouteComponentProps {}
+interface HeaderProps extends RouteComponentProps {
+  theme: Themes;
+  changeTheme: (theme: Themes) => void;
+}
 
 const Header: FC<HeaderProps> = props => {
   const links = [
@@ -27,6 +32,10 @@ const Header: FC<HeaderProps> = props => {
     setMenuShown(prevState => !prevState);
   };
 
+  const closeMenu = () => {
+    setMenuShown(false);
+  };
+
   const prevRouteRef = useRef<string | null>(null);
   useEffect(() => {
     if (prevRouteRef.current == null) {
@@ -39,6 +48,14 @@ const Header: FC<HeaderProps> = props => {
 
   return (
     <header className="header">
+      <ThemeSwitcher
+        theme={props.theme}
+        changeTheme={props.changeTheme}
+        closeMenu={closeMenu}
+        className={
+          isMenuShown ? "theme-switcher--active" : "theme-switcher--inactive"
+        }
+      />
       <div className="header__logo">
         <img src={LogoImg} className="header__logo__img" alt="logo" />
         <NavLink to="/" className="header__logo__brand">

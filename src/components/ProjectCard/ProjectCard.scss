@@ -2,8 +2,8 @@
 @import "mediaQuery";
 
 .project-card {
-    background: white;
-    box-shadow: 29px 29px 58px #cecece;
+    background-color: var(--card-background);
+    box-shadow: 29px 29px 58px var(--shadow);
 
     display: flex;
     flex-direction: column;
@@ -46,6 +46,7 @@
     }
 
     &__title {
+        color: var(--title);
         font-size: 2.5rem;
         margin-bottom: 1.5rem;
     }

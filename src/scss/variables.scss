@@ -1,5 +1,5 @@
 // TODO: setup with css vars the default color to switch from light to dark theme
-$primary-color: #7510f7;
+$primary-color: var(--primary-color);
 
 $blue: rgb(0, 183, 255);
 $dark-blue: rgb(0, 110, 255);
@@ -7,3 +7,15 @@ $violet: rgb(255, 0, 242);
 $dark-violet: rgb(234, 0, 255);
 
 $sub-title: rgb(119, 119, 119);
+
+:root {
+    // default to light theme
+    --primary-color: #7510f7;
+    --background: white;
+    --background-darken: rgb(233, 233, 233);
+    --title: black;
+    --sub-title: rgb(85, 85, 85);
+    --shadow: #cecece;
+    --card-background: white;
+    --theme-switcher: rgb(183, 235, 255);
+}

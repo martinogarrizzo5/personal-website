@@ -1,0 +1,43 @@
+@import "mediaQuery";
+
+$size: 4.5rem;
+.theme-switcher {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 1000;
+
+    height: $size;
+    width: $size;
+
+    background-color: var(--theme-switcher); // rgb(70, 70, 70)
+    border-radius: 50%;
+
+    cursor: pointer;
+    overflow: hidden;
+
+    @include mediaQuery($tablet) {
+        top: unset;
+        bottom: 2rem;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        font-size: 2.5rem;
+        color: rgb(255, 251, 0);
+    }
+
+    &--active {
+    }
+
+    &--inactive {
+        @include mediaQuery($tablet) {
+            display: none;
+        }
+    }
+}

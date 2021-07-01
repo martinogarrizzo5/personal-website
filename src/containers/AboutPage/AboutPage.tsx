@@ -51,7 +51,7 @@ const AboutPage: FC = () => {
               algorithms and data structures thankfully to its simple sintax. In
               the last months I approached mobile app development with Flutter
               and I enjoyed it! I also participated in the Italian Computer
-              Science Olympics 2021 arriving 179° over 1983 people.
+              Science Olympics 2021 arriving 179° over 2000 people.
             </p>
           </div>
           <div className="about__biography__description__section about__biography__general-info">

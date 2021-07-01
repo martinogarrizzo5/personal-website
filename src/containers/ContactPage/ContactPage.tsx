@@ -1,13 +1,20 @@
-import { useState, ChangeEvent, FormEvent } from "react";
+import { useState, ChangeEvent, FormEvent, FC } from "react";
 import firebase from "../../firebase";
 
-import ThanksImg from "./thanks.png";
+import ThanksLightImg from "./images/thanks-light.png";
+import ThanksDarkImg from "./images/thanks-dark.svg";
+
 import PageContainer from "../../utils/PageContainer";
 import Select from "../../components/Select/Select";
+import { Themes } from "../../utils/themeManagement";
 
 import "./ContactPage.scss";
 
-const ContactPage = () => {
+interface ContactPageProps {
+  theme: Themes;
+}
+
+const ContactPage: FC<ContactPageProps> = props => {
   const contactMessagesDB = firebase.firestore().collection("messages");
 
   const [formValues, setFormValues] = useState({
@@ -24,7 +31,7 @@ const ContactPage = () => {
   ];
 
   const [isMessageSentSuccessfully, setMessageSentSuccessfully] =
-    useState<boolean>(false);
+    useState<boolean>(true);
 
   const handleFormValues = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -47,7 +54,6 @@ const ContactPage = () => {
         interest: formValues.interest,
         details: formValues.details,
       };
-
       await contactMessagesDB.add(newDocument);
     } catch {
       isRequestValid = false;
@@ -67,9 +73,13 @@ const ContactPage = () => {
         You Are The Best!
       </h3>
       <img
-        src={ThanksImg}
+        src={props.theme === Themes.dark ? ThanksDarkImg : ThanksLightImg}
         alt="thanks-img"
-        className="contact__notification__img"
+        className={
+          props.theme === Themes.dark
+            ? "contact__notification__img--dark"
+            : "contact__notification__img--light"
+        }
       />
       <h5 className="contact__notification__sub-title">
         I've received your message and I'll answer to all your questions as soon
