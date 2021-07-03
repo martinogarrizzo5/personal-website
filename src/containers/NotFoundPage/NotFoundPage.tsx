@@ -11,7 +11,7 @@ const NotFoundPage: FC = () => {
       <h1 className="not-found__title">Oh No!</h1>
       <p className="not-found__sub-title">
         It seems you are trying to access a page that doesn't exist... or maybe
-        he's only trying to hide from you...
+        it's only trying to hide from you...
       </p>
     </PageContainer>
   );
