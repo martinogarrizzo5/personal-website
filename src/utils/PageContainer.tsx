@@ -9,13 +9,13 @@ interface PageContainerProps {
 const PageContainer: FC<PageContainerProps> = props => {
   return (
     <Fragment>
-      <motion.div
+      <motion.main
         className={props.className}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
         {props.children}
-      </motion.div>
+      </motion.main>
       <Footer />
     </Fragment>
   );

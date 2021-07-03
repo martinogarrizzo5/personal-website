@@ -31,7 +31,7 @@ const ContactPage: FC<ContactPageProps> = props => {
   ];
 
   const [isMessageSentSuccessfully, setMessageSentSuccessfully] =
-    useState<boolean>(true);
+    useState<boolean>(false);
 
   const handleFormValues = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>

@@ -1,0 +1,41 @@
+@import "mediaQuery";
+@import "variables";
+
+.not-found {
+    width: 100%;
+    padding: 0 8rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    @include mediaQuery($phone) {
+        padding: 0 4rem;
+    }
+
+    @include mediaQuery($phone-md) {
+        padding: 0 2.5rem;
+    }
+
+    &__title {
+        color: var(--title);
+        font-size: 4rem;
+    }
+
+    &__sub-title {
+        color: var(--sub-title);
+        font-size: 1.8rem;
+    }
+
+    &__img {
+        height: 50rem;
+        margin: 4rem 0;
+
+        @include mediaQuery($tablet) {
+            width: 90%;
+            height: auto;
+            margin: 4rem auto;
+        }
+    }
+}

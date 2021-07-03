@@ -23,6 +23,9 @@ const PortfolioPage = lazy(
 );
 const AboutPage = lazy(() => import("./containers/AboutPage/AboutPage"));
 const ContactPage = lazy(() => import("./containers/ContactPage/ContactPage"));
+const NotFoundPage = lazy(
+  () => import("./containers/NotFoundPage/NotFoundPage")
+);
 
 // N.B! Footer already included in PageContainer
 const App: FC = () => {
@@ -38,7 +41,7 @@ const App: FC = () => {
       {/* <ThemeSwitcher changeTheme={changeTheme} theme={theme} /> */}
       <Header changeTheme={changeTheme} theme={theme} />
       <AnimatePresence exitBeforeEnter>
-        <Switch key="alpha">
+        <Switch>
           <Route
             path="/"
             exact
@@ -61,6 +64,7 @@ const App: FC = () => {
               <LazyComponent item={<ContactPage theme={theme} />} />
             )}
           />
+          <Route render={() => <LazyComponent item={<NotFoundPage />} />} />
         </Switch>
       </AnimatePresence>
     </ScrollToTop>
