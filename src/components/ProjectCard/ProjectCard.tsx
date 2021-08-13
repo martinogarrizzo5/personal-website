@@ -3,12 +3,12 @@ import { IconType } from "react-icons";
 import "./ProjectCard.scss";
 
 interface ProjectCardProps {
-  imageUrl: string,
-  title: string,
-  description: string,
-  link: string
-  type: string,
-  typeIcon: IconType,
+  imageUrl: string;
+  title: string;
+  description: string;
+  link: string;
+  type: string;
+  typeIcon: IconType;
 }
 
 const projectCard: FC<ProjectCardProps> = props => {
@@ -25,7 +25,7 @@ const projectCard: FC<ProjectCardProps> = props => {
         <h3 className="project-card__title">{props.title}</h3>
         <p className="project-card__sub-title">{props.description}</p>
 
-        <a className="project-card__link" href={props.link}>
+        <a className="project-card__link btn" href={props.link}>
           See More
         </a>
       </div>

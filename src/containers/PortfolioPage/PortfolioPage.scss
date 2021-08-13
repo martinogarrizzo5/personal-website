@@ -16,6 +16,10 @@
         font-weight: 300;
         font-size: 4rem;
         text-align: center;
+
+        @include mediaQuery($phone-sm) {
+            font-size: 3.5rem;
+        }
     }
 
     &__grid {

@@ -7,6 +7,7 @@ $tablet-xs: 43.75em;
 $phone: 37.5em; // 600px
 $phone-md: 28.125em; // 450px
 $phone-sm: 25em; // 400px
+$phone-xs: 20.625em; // 330px
 
 @mixin mediaQuery($breakpoint) {
     @if $breakpoint == $desktop {

@@ -21,6 +21,10 @@
             font-size: 3.5rem;
             margin-top: 2.5rem;
         }
+
+        @include mediaQuery($phone-xs) {
+            font-size: 3rem;
+        }
     }
 
     &__form {

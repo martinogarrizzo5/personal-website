@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { v4 as uuid } from "uuid";
 import PageContainer from "../../utils/PageContainer";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
@@ -20,11 +20,12 @@ const LandingPage: FC = () => {
             <br />A Full-Stack Developer and Designer
           </h1>
           <p className="landing__header__sub-title">
-            I design and code user interfaces and I love what I do. Programming
-            is my real passion and I'll never stop coding
+            Need a developer? Stop searching. I'm the person you are looking
+            for. Just let me show you the projects I made and I'll promise
+            you'll be convinced
             <br />
           </p>
-          <NavLink to="/projects" className="landing__header__cta">
+          <NavLink to="/projects" className="landing__header__cta btn">
             View Portfolio
           </NavLink>
         </div>
@@ -46,9 +47,9 @@ const LandingPage: FC = () => {
             <ProjectCard {...project} key={uuid()} />
           ))}
         </div>
-        <NavLink to="/projects" className="landing__projects__link">
+        <Link to="/projects" className="landing__projects__link">
           View All Projects &rarr;
-        </NavLink>
+        </Link>
       </div>
     </PageContainer>
   );

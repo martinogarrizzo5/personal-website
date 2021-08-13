@@ -1,5 +1,6 @@
 @import "variables";
 @import "mediaQuery";
+@import "typography";
 
 .project-card {
     background-color: var(--card-background);
@@ -55,34 +56,13 @@
         flex: 1;
         color: var(--sub-title);
         margin-bottom: 4rem;
+        line-height: 140%;
     }
 
     &__link {
-        background-image: linear-gradient(
-            to right,
-            rgb(0, 183, 255),
-            rgb(255, 0, 242)
-        );
-        color: white;
+        // .btn class selector used
         font-size: 1.8rem;
-        text-align: center;
-
         padding: 1rem 2rem;
-        border-radius: 1rem;
-
-        &:link,
-        &:visited,
-        &:hover,
-        &:active {
-            text-decoration: none;
-        }
-
-        &:hover {
-            background-image: linear-gradient(
-                to right,
-                darken(rgb(0, 183, 255), 10%),
-                darken(rgb(255, 0, 242), 10%)
-            );
-        }
+        text-align: center;
     }
 }

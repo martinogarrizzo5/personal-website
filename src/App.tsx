@@ -38,7 +38,6 @@ const App: FC = () => {
 
   return (
     <ScrollToTop>
-      {/* <ThemeSwitcher changeTheme={changeTheme} theme={theme} /> */}
       <Header changeTheme={changeTheme} theme={theme} />
       <AnimatePresence exitBeforeEnter>
         <Switch>

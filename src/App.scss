@@ -22,6 +22,10 @@ html {
         font-size: 53%;
     }
 
+    @include mediaQuery($phone-xs) {
+        font-size: 50%;
+    }
+
     background-color: var(
         --background
     ); // to avoid white flash when loading page

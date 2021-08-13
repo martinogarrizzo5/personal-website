@@ -7,6 +7,7 @@ import pathFindingImg from "./pathFindingImg.png";
 import trackifyImg from "./trackifyImg.png";
 import sharelogicsImg from "./sharelogicsImg.png";
 import trisImg from "./trisImg.png";
+import lifeGymImg from "./lifeGymImg.jpeg";
 
 // icons
 import { IconType } from "react-icons";
@@ -19,6 +20,7 @@ import {
   FaBook,
 } from "react-icons/fa";
 import { RiMapPin2Fill } from "react-icons/ri";
+import { GiMuscleUp } from "react-icons/gi";
 
 type Project = {
   typeIcon: IconType;
@@ -56,6 +58,14 @@ const projects: Project[] = [
     description:
       "Website version of the famous game where you need to remember the sequence of colors. Here you'll test your memory.",
     link: "https://martinogarrizzo5.github.io/SimonGame/",
+  },
+  {
+    typeIcon: GiMuscleUp,
+    type: "Sport",
+    title: "Life Gym",
+    imageUrl: lifeGymImg,
+    description: "Website made for my favorite gym in Romania.",
+    link: "https://life-gym.web.app/",
   },
   {
     typeIcon: FaCat,
