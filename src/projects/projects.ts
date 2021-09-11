@@ -8,6 +8,8 @@ import trackifyImg from "./trackifyImg.png";
 import sharelogicsImg from "./sharelogicsImg.png";
 import trisImg from "./trisImg.png";
 import lifeGymImg from "./lifeGymImg.jpeg";
+import favorityImg from "./favorityImg.jpeg";
+import dryTeaImg from "./dryTea.png";
 
 // icons
 import { IconType } from "react-icons";
@@ -18,6 +20,8 @@ import {
   FaCat,
   FaMapPin,
   FaBook,
+  FaStickyNote,
+  FaCocktail,
 } from "react-icons/fa";
 import { RiMapPin2Fill } from "react-icons/ri";
 import { GiMuscleUp } from "react-icons/gi";
@@ -40,6 +44,24 @@ const projects: Project[] = [
     description:
       "Find activities and hotels int the most beautiful places in the world and live experiences that you'll never forget.",
     link: "https://dream-travel.herokuapp.com/",
+  },
+  {
+    typeIcon: FaCocktail,
+    type: "Party",
+    title: "Dry Tea",
+    imageUrl: dryTeaImg,
+    description:
+      "Doing a party tonight? You'll certainly need only the best cocktails. Don't worry Dry Tea is the solution",
+    link: "https://drytea.web.app",
+  },
+  {
+    typeIcon: FaStickyNote,
+    type: "Notes",
+    title: "Favority",
+    imageUrl: favorityImg,
+    description:
+      "Never use handwritten notes anymore! Favority is the solution to store all your notes and ideas in a beautiful workspace.",
+    link: "https://love-favority.web.app",
   },
   {
     typeIcon: FaClipboardList,
