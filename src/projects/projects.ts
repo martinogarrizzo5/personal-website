@@ -6,10 +6,11 @@ import catClickerImg from "./catClickerImg.png";
 import pathFindingImg from "./pathFindingImg.png";
 import trackifyImg from "./trackifyImg.png";
 import sharelogicsImg from "./sharelogicsImg.png";
-import trisImg from "./trisImg.png";
+import trisImg from "./glow-tris.jpg";
 import lifeGymImg from "./lifeGymImg.jpeg";
 import favorityImg from "./favorityImg.jpeg";
 import dryTeaImg from "./dryTea.png";
+import netflixImg from "./netflixImg.png";
 
 // icons
 import { IconType } from "react-icons";
@@ -23,6 +24,7 @@ import {
   FaStickyNote,
   FaCocktail,
 } from "react-icons/fa";
+import { BsCollectionPlayFill } from "react-icons/bs";
 import { RiMapPin2Fill } from "react-icons/ri";
 import { GiMuscleUp } from "react-icons/gi";
 
@@ -73,13 +75,13 @@ const projects: Project[] = [
     link: "https://get-boring.herokuapp.com/",
   },
   {
-    typeIcon: FaGamepad,
-    type: "Fun",
-    title: "Simon Game",
-    imageUrl: simonGameImg,
+    typeIcon: BsCollectionPlayFill,
+    type: "Series and Films",
+    title: "Netflix Clone",
+    imageUrl: netflixImg,
     description:
-      "Website version of the famous game where you need to remember the sequence of colors. Here you'll test your memory.",
-    link: "https://martinogarrizzo5.github.io/SimonGame/",
+      "Netflix Frontend Clone. A React project that all frontend developers should try to do!",
+    link: "https://netflix-clone-martin.web.app/",
   },
   {
     typeIcon: GiMuscleUp,
@@ -88,6 +90,15 @@ const projects: Project[] = [
     imageUrl: lifeGymImg,
     description: "Website made for my favorite gym in Romania.",
     link: "https://life-gym.web.app/",
+  },
+  {
+    typeIcon: FaGamepad,
+    type: "Fun",
+    title: "Simon Game",
+    imageUrl: simonGameImg,
+    description:
+      "Website version of the famous game where you need to remember the sequence of colors. Here you'll test your memory.",
+    link: "https://martinogarrizzo5.github.io/SimonGame/",
   },
   {
     typeIcon: FaCat,
@@ -126,10 +137,10 @@ const projects: Project[] = [
   },
   {
     typeIcon: FaGamepad,
-    type: "Cringe Fun",
+    type: "Glow Lights",
     title: "Tic Tac Toe!",
     imageUrl: trisImg,
-    description: "Defeat the death in the ultimate challenge. ⚠️Cringe Alert!",
+    description: "A simple game...fancy and glow.",
     link: "https://martinogarrizzo5.github.io/tic-tac-toe/",
   },
 ];
