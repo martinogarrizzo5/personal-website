@@ -3,7 +3,7 @@ import dreamTravelImg from "./dreamTravelImg.png";
 import getBoringImg from "./getBoringImg.png";
 import simonGameImg from "./simonGameImg.png";
 import catClickerImg from "./catClickerImg.png";
-import pathFindingImg from "./pathFindingImg.png";
+import pathFindingImg from "./pathFindingImg.jpg";
 import trackifyImg from "./trackifyImg.png";
 import sharelogicsImg from "./sharelogicsImg.png";
 import trisImg from "./glow-tris.jpg";
@@ -11,6 +11,7 @@ import lifeGymImg from "./lifeGymImg.jpeg";
 import favorityImg from "./favorityImg.jpeg";
 import dryTeaImg from "./dryTea.png";
 import netflixImg from "./netflixImg.png";
+import earlyImg from "./earlyImg.jpg";
 
 // icons
 import { IconType } from "react-icons";
@@ -23,6 +24,7 @@ import {
   FaBook,
   FaStickyNote,
   FaCocktail,
+  FaShoppingBag,
 } from "react-icons/fa";
 import { BsCollectionPlayFill } from "react-icons/bs";
 import { RiMapPin2Fill } from "react-icons/ri";
@@ -35,6 +37,7 @@ type Project = {
   imageUrl: string;
   description: string;
   link: string;
+  isComingSoon?: boolean;
 };
 
 const projects: Project[] = [
@@ -75,6 +78,16 @@ const projects: Project[] = [
     link: "https://get-boring.herokuapp.com/",
   },
   {
+    typeIcon: FaShoppingBag,
+    type: "Buy Until You Drop",
+    title: "Early",
+    imageUrl: earlyImg,
+    description:
+      "Have you ever seen a product that you want but unfortunately with a bad price? What if you could track the price and buy at the best time? Well, I have an exclusive app only for you!",
+    link: "https://love-favority.web.app",
+    isComingSoon: true,
+  },
+  {
     typeIcon: BsCollectionPlayFill,
     type: "Series and Films",
     title: "Netflix Clone",
@@ -85,7 +98,7 @@ const projects: Project[] = [
   },
   {
     typeIcon: GiMuscleUp,
-    type: "Sport",
+    type: "Big As Danny Lazzarin",
     title: "Life Gym",
     imageUrl: lifeGymImg,
     description: "Website made for my favorite gym in Romania.",

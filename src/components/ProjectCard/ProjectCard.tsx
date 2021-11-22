@@ -9,9 +9,22 @@ interface ProjectCardProps {
   link: string;
   type: string;
   typeIcon: IconType;
+  isComingSoon?: boolean;
 }
 
 const projectCard: FC<ProjectCardProps> = props => {
+  const comingSoonButtom = (
+    <a className="project-card__link btn btn__unavailable" href="#">
+      Coming Soon!
+    </a>
+  );
+
+  const button = (
+    <a className="project-card__link btn" href={props.link}>
+      See More
+    </a>
+  );
+
   return (
     <div className="project-card">
       <div className="project-card__img-container">
@@ -25,9 +38,7 @@ const projectCard: FC<ProjectCardProps> = props => {
         <h3 className="project-card__title">{props.title}</h3>
         <p className="project-card__sub-title">{props.description}</p>
 
-        <a className="project-card__link btn" href={props.link}>
-          See More
-        </a>
+        {props.isComingSoon ? comingSoonButtom : button}
       </div>
     </div>
   );

@@ -29,4 +29,10 @@
             darken($violet, 10%)
         );
     }
+
+    &__unavailable {
+        pointer-events: none;
+        background-color: rgb(200, 200, 200) !important;
+        background-image: none;
+    }
 }
