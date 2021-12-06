@@ -4,7 +4,6 @@ import getBoringImg from "./getBoringImg.png";
 import simonGameImg from "./simonGameImg.png";
 import catClickerImg from "./catClickerImg.png";
 import pathFindingImg from "./pathFindingImg.jpg";
-import trackifyImg from "./trackifyImg.png";
 import sharelogicsImg from "./sharelogicsImg.png";
 import trisImg from "./glow-tris.jpg";
 import lifeGymImg from "./lifeGymImg.jpeg";
@@ -12,6 +11,7 @@ import favorityImg from "./favorityImg.jpeg";
 import dryTeaImg from "./dryTea.png";
 import netflixImg from "./netflixImg.png";
 import earlyImg from "./earlyImg.jpg";
+import miniChessImg from "./mini-chess.jpg";
 
 // icons
 import { IconType } from "react-icons";
@@ -20,11 +20,11 @@ import {
   FaGamepad,
   FaClipboardList,
   FaCat,
-  FaMapPin,
   FaBook,
   FaStickyNote,
   FaCocktail,
   FaShoppingBag,
+  FaBrain,
 } from "react-icons/fa";
 import { BsCollectionPlayFill } from "react-icons/bs";
 import { RiMapPin2Fill } from "react-icons/ri";
@@ -67,6 +67,15 @@ const projects: Project[] = [
     description:
       "Never use handwritten notes anymore! Favority is the solution to store all your notes and ideas in a beautiful workspace.",
     link: "https://love-favority.web.app",
+  },
+  {
+    typeIcon: FaBrain,
+    type: "Brain Skills",
+    title: "Mini Chess",
+    imageUrl: miniChessImg,
+    description:
+      "In Mini Chess You will face with a lot of situations to the test your skills in checkmating the enemy king.",
+    link: "https://martinogarrizzo5.github.io/mini-chess/",
   },
   {
     typeIcon: FaClipboardList,
@@ -129,15 +138,6 @@ const projects: Project[] = [
     imageUrl: pathFindingImg,
     description: "Use algorithms to find the shortest path between two points.",
     link: "https://martinogarrizzo5.github.io/PathFinding/",
-  },
-  {
-    typeIcon: FaMapPin,
-    type: "Position",
-    title: "Trackify",
-    imageUrl: trackifyImg,
-    description:
-      "Find the position of your public ip address. Don't worry it's all legal!",
-    link: "https://trackify.web.app/",
   },
   {
     typeIcon: FaBook,
