@@ -38,8 +38,9 @@
         &__img {
             border-radius: 50%;
             width: 25rem;
-            height: 27rem;
+            height: 25rem;
             object-fit: cover;
+            box-shadow: 0 0 0.4rem var(--shadow);
 
             &__caption {
                 margin-top: 2rem;

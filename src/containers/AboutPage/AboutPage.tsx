@@ -8,7 +8,7 @@ import { IoMdPin, IoMdMail } from "react-icons/io";
 
 // images
 import skills from "./skills";
-import manImg from "./just-me.jpg";
+import manImg from "./d.jpg";
 
 // styles
 import "./AboutPage.scss";
