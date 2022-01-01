@@ -6,7 +6,6 @@ import catClickerImg from "./catClickerImg.png";
 import pathFindingImg from "./pathFindingImg.jpg";
 import sharelogicsImg from "./sharelogicsImg.png";
 import trisImg from "./glow-tris.jpg";
-import lifeGymImg from "./lifeGymImg.jpeg";
 import favorityImg from "./favorityImg.jpeg";
 import dryTeaImg from "./dryTea.png";
 import netflixImg from "./netflixImg.png";
@@ -47,7 +46,7 @@ const projects: Project[] = [
     title: "Dream Travel",
     imageUrl: dreamTravelImg,
     description:
-      "Find activities and hotels int the most beautiful places in the world and live experiences that you'll never forget.",
+      "Find activities and hotels into the most beautiful places in the world and live experiences that you'll never forget.",
     link: "https://dream-travel.herokuapp.com/",
   },
   {
@@ -104,14 +103,6 @@ const projects: Project[] = [
     description:
       "Netflix Frontend Clone. A React project that all frontend developers should try to do!",
     link: "https://netflix-clone-martin.web.app/",
-  },
-  {
-    typeIcon: GiMuscleUp,
-    type: "Big As Danny Lazzarin",
-    title: "Life Gym",
-    imageUrl: lifeGymImg,
-    description: "Website made for my favorite gym in Romania.",
-    link: "https://life-gym.web.app/",
   },
   {
     typeIcon: FaGamepad,
