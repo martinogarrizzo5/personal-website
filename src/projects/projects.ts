@@ -27,7 +27,6 @@ import {
 } from "react-icons/fa";
 import { BsCollectionPlayFill } from "react-icons/bs";
 import { RiMapPin2Fill } from "react-icons/ri";
-import { GiMuscleUp } from "react-icons/gi";
 
 type Project = {
   typeIcon: IconType;
