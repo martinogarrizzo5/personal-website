@@ -11,12 +11,12 @@ const skills: Skill[] = [
   {
     icon: SiCss3,
     language: "CSS",
-    technologies: "Sass, FlexBox, CSS Grid",
+    technologies: "Sass, Tailwindcss",
   },
   {
     icon: SiJavascript,
     language: "Javascript",
-    technologies: "MERN Stack, Typescript",
+    technologies: "Next.js, MERN Stack, Typescript",
   },
   {
     icon: SiDart,
