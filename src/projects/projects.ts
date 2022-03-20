@@ -2,7 +2,6 @@
 import dreamTravelImg from "./dreamTravelImg.png";
 import getBoringImg from "./getBoringImg.png";
 import simonGameImg from "./simonGameImg.png";
-import catClickerImg from "./catClickerImg.png";
 import pathFindingImg from "./pathFindingImg.jpg";
 import sharelogicsImg from "./sharelogicsImg.png";
 import trisImg from "./glow-tris.jpg";
@@ -11,6 +10,7 @@ import dryTeaImg from "./dryTea.png";
 import netflixImg from "./netflixImg.png";
 import earlyImg from "./earlyImg.jpg";
 import miniChessImg from "./mini-chess.jpg";
+import theNightDreamerImg from "./theNightDreamerImg.jpeg";
 
 // icons
 import { IconType } from "react-icons";
@@ -18,7 +18,6 @@ import {
   FaPlaneDeparture,
   FaGamepad,
   FaClipboardList,
-  FaCat,
   FaBook,
   FaStickyNote,
   FaCocktail,
@@ -40,6 +39,15 @@ type Project = {
 
 const projects: Project[] = [
   {
+    typeIcon: FaShoppingBag,
+    type: "Buy Until You Drop",
+    title: "The Night Dreamer Shop",
+    imageUrl: theNightDreamerImg,
+    description:
+      "An online store where you can buy everything you have ever wanted. All this, under the darkness of the night.",
+    link: "https://the-night-dreamer.vercel.app/",
+  },
+  {
     typeIcon: FaPlaneDeparture,
     type: "Trip",
     title: "Dream Travel",
@@ -54,7 +62,7 @@ const projects: Project[] = [
     title: "Dry Tea",
     imageUrl: dryTeaImg,
     description:
-      "Doing a party tonight? You'll certainly need only the best cocktails. Don't worry Dry Tea is the solution",
+      "Doing a party tonight? You'll certainly need only the best cocktails. Don't worry Dry Tea is the solution.",
     link: "https://drytea.web.app",
   },
   {
@@ -106,20 +114,19 @@ const projects: Project[] = [
   {
     typeIcon: FaGamepad,
     type: "Fun",
+    title: "Tic Tac Toe!",
+    imageUrl: trisImg,
+    description: "A simple game...fancy and glow.",
+    link: "https://martinogarrizzo5.github.io/tic-tac-toe/",
+  },
+  {
+    typeIcon: FaGamepad,
+    type: "Fun",
     title: "Simon Game",
     imageUrl: simonGameImg,
     description:
       "Website version of the famous game where you need to remember the sequence of colors. Here you'll test your memory.",
     link: "https://martinogarrizzo5.github.io/SimonGame/",
-  },
-  {
-    typeIcon: FaCat,
-    type: "Cats",
-    title: "Cat Clicker",
-    imageUrl: catClickerImg,
-    description:
-      "A meaningless website where you can tap on a cat. Tap on it at least 10 times...",
-    link: "https://martinogarrizzo5.github.io/catClicker/",
   },
   {
     typeIcon: RiMapPin2Fill,
@@ -137,14 +144,6 @@ const projects: Project[] = [
     description:
       "Want to learn programming but don't know where to start? In my academy you'll get all the knowledge you need to become a skilled coder.",
     link: "https://martin-meneghetti.herokuapp.com/",
-  },
-  {
-    typeIcon: FaGamepad,
-    type: "Glow Lights",
-    title: "Tic Tac Toe!",
-    imageUrl: trisImg,
-    description: "A simple game...fancy and glow.",
-    link: "https://martinogarrizzo5.github.io/tic-tac-toe/",
   },
 ];
 

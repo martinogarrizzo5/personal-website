@@ -8,7 +8,7 @@ const PortfolioPage = () => {
   return (
     <PageContainer className="portfolio">
       <h1 className="portfolio__header is-title">
-        Here are the most exciting websites I've been working on!
+        These are the most exciting websites I've been working on!
       </h1>
       <div className="portfolio__grid">
         {projects.map(project => (
