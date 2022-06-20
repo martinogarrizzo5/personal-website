@@ -11,6 +11,7 @@ import netflixImg from "./netflixImg.png";
 import earlyImg from "./earlyImg.jpg";
 import miniChessImg from "./mini-chess.jpg";
 import theNightDreamerImg from "./theNightDreamerImg.jpeg";
+import castelturismoImg from "./castelturismo.png";
 
 // icons
 import { IconType } from "react-icons";
@@ -64,6 +65,16 @@ const projects: Project[] = [
     description:
       "Doing a party tonight? You'll certainly need only the best cocktails. Don't worry Dry Tea is the solution.",
     link: "https://drytea.web.app",
+  },
+  {
+    typeIcon: FaBrain,
+    type: "Culture",
+    title: "Castelturismo",
+    imageUrl: castelturismoImg,
+    description:
+      "Guide for tourism in Castelfranco Veneto among the mansions and historic buildings.",
+    link: "",
+    isComingSoon: true,
   },
   {
     typeIcon: FaStickyNote,
