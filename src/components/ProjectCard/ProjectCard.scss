@@ -1,6 +1,6 @@
-@import "variables";
-@import "mediaQuery";
-@import "typography";
+@import "/src/scss/variables";
+@import "/src/scss/mediaQuery";
+@import "/src/scss/typography";
 
 .project-card {
     background-color: var(--card-background);
@@ -59,10 +59,29 @@
         line-height: 140%;
     }
 
+    &__links {
+        display: flex;
+        flex-direction: column;
+    }
+
     &__link {
         // .btn class selector used
         font-size: 1.8rem;
         padding: 1rem 2rem;
         text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__icon {
+            font-size: 2rem;
+            margin-right: 0.5rem;
+        }
+    }
+
+    &__divider {
+        height: 1.8rem;
+        flex-shrink: 0;
     }
 }

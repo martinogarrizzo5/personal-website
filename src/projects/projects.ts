@@ -1,17 +1,16 @@
 // images
-import dreamTravelImg from "./dreamTravelImg.png";
-import getBoringImg from "./getBoringImg.png";
-import simonGameImg from "./simonGameImg.png";
-import pathFindingImg from "./pathFindingImg.jpg";
-import sharelogicsImg from "./sharelogicsImg.png";
-import trisImg from "./glow-tris.jpg";
-import favorityImg from "./favorityImg.jpeg";
-import dryTeaImg from "./dryTea.png";
-import netflixImg from "./netflixImg.png";
-import earlyImg from "./earlyImg.jpg";
-import miniChessImg from "./mini-chess.jpg";
-import theNightDreamerImg from "./theNightDreamerImg.jpeg";
-import castelturismoImg from "./castelturismo.png";
+import dreamTravelImg from "./images/dreamTravelImg.png";
+import getBoringImg from "./images/getBoringImg.png";
+import simonGameImg from "./images/simonGameImg.png";
+import pathFindingImg from "./images/pathFindingImg.jpg";
+import trisImg from "./images/glow-tris.jpg";
+import favorityImg from "./images/favorityImg.jpeg";
+import dryTeaImg from "./images/dryTea.png";
+import netflixImg from "./images/netflixImg.png";
+import earlyImg from "./images/earlyImg.jpg";
+import miniChessImg from "./images/mini-chess.jpg";
+import theNightDreamerImg from "./images/theNightDreamerImg.jpeg";
+import castelturismoImg from "./images/castelturismo.png";
 
 // icons
 import { IconType } from "react-icons";
@@ -19,7 +18,6 @@ import {
   FaPlaneDeparture,
   FaGamepad,
   FaClipboardList,
-  FaBook,
   FaStickyNote,
   FaCocktail,
   FaShoppingBag,
@@ -36,6 +34,7 @@ type Project = {
   description: string;
   link: string;
   isComingSoon?: boolean;
+  sourceCodeLink?: string;
 };
 
 const projects: Project[] = [
@@ -65,6 +64,7 @@ const projects: Project[] = [
     description:
       "Doing a party tonight? You'll certainly need only the best cocktails. Don't worry Dry Tea is the solution.",
     link: "https://drytea.web.app",
+    sourceCodeLink: "https://github.com/martinogarrizzo5/dry-tea",
   },
   {
     typeIcon: FaBrain,
@@ -74,6 +74,7 @@ const projects: Project[] = [
     description:
       "Guide for tourism in Castelfranco Veneto among the mansions and historic buildings.",
     link: "",
+    sourceCodeLink: "https://github.com/martinogarrizzo5/castelturismo",
     isComingSoon: true,
   },
   {
@@ -93,6 +94,7 @@ const projects: Project[] = [
     description:
       "In Mini Chess You will face with a lot of situations to the test your skills in checkmating the enemy king.",
     link: "https://martinogarrizzo5.github.io/mini-chess/",
+    sourceCodeLink: "https://github.com/martinogarrizzo5/mini-chess",
   },
   {
     typeIcon: FaClipboardList,
@@ -129,6 +131,7 @@ const projects: Project[] = [
     imageUrl: trisImg,
     description: "A simple game...fancy and glow.",
     link: "https://martinogarrizzo5.github.io/tic-tac-toe/",
+    sourceCodeLink: "https://github.com/martinogarrizzo5/tic-tac-toe",
   },
   {
     typeIcon: FaGamepad,
@@ -138,6 +141,7 @@ const projects: Project[] = [
     description:
       "Website version of the famous game where you need to remember the sequence of colors. Here you'll test your memory.",
     link: "https://martinogarrizzo5.github.io/SimonGame/",
+    sourceCodeLink: "https://github.com/martinogarrizzo5/SimonGame",
   },
   {
     typeIcon: RiMapPin2Fill,
@@ -146,15 +150,7 @@ const projects: Project[] = [
     imageUrl: pathFindingImg,
     description: "Use algorithms to find the shortest path between two points.",
     link: "https://martinogarrizzo5.github.io/PathFinding/",
-  },
-  {
-    typeIcon: FaBook,
-    type: "Learning",
-    title: "Sharelogics Academy",
-    imageUrl: sharelogicsImg,
-    description:
-      "Want to learn programming but don't know where to start? In my academy you'll get all the knowledge you need to become a skilled coder.",
-    link: "https://martin-meneghetti.herokuapp.com/",
+    sourceCodeLink: "https://github.com/martinogarrizzo5/PathFinding",
   },
 ];
 

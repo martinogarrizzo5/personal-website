@@ -1,4 +1,4 @@
-@import "variables";
+@import "/src/scss/variables";
 
 .is-title {
     background-image: linear-gradient(to right, $blue, $violet);
@@ -33,6 +33,11 @@
     &__unavailable {
         pointer-events: none;
         background-color: rgb(68, 68, 68) !important;
+        background-image: none;
+    }
+
+    &__source {
+        background-color: var(--primary-color) !important;
         background-image: none;
     }
 }
