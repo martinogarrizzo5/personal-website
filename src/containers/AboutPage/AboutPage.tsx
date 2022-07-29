@@ -45,13 +45,15 @@ const AboutPage: FC = () => {
               My Journey
             </h3>
             <p className="about__biography__description__text">
-              Starting from HTML and exploring the world of web development I
-              learnt so much about the core concepts of websites becoming a MERN
-              developer. Learning Python made me clear a lot of aspects of
-              algorithms and data structures thankfully to its simple sintax. In
-              the last months I approached mobile app development with Flutter
-              and I enjoyed it! I also participated in the Italian Computer
-              Science Olympics 2021 arriving 121°.
+              I Started from HTML exploring the world of web development and I
+              learnt so much about the core concepts of websites and learning
+              Javascript allowed me to become a MERN developer. Then I learnt
+              Flutter because I believe that it is the future of app development
+              and now I use it to create mobile apps and desktop apps. I made
+              some apps for local companies like the Proloco of Castelfranco
+              Veneto which needed an app to encourage tourism in the city. I
+              also participated in the Italian Computer Science Olympics 2021
+              arriving 121°.
             </p>
           </div>
           <div className="about__biography__description__section about__biography__general-info">

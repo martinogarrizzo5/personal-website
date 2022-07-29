@@ -23,11 +23,9 @@
     }
 
     &:hover {
-        background-image: linear-gradient(
-            to right,
-            darken($blue, 10%),
-            darken($violet, 10%)
-        );
+        background-image: linear-gradient(to right,
+                darken($blue, 10%),
+                darken($violet, 10%));
     }
 
     &__unavailable {
@@ -39,5 +37,10 @@
     &__source {
         background-color: var(--primary-color) !important;
         background-image: none;
+
+        &:hover {
+            background-color: var(--primary-color-darken) !important;
+            background-image: none;
+        }
     }
 }

@@ -1,4 +1,5 @@
 import { SiJavascript, SiDart, SiPython, SiCss3 } from "react-icons/si";
+import { MdDesignServices } from "react-icons/md";
 import { IconType } from "react-icons";
 
 type Skill = {
@@ -24,9 +25,9 @@ const skills: Skill[] = [
     technologies: "Flutter",
   },
   {
-    icon: SiPython,
-    language: "Python",
-    technologies: "Algorithms, Data Structures",
+    icon: MdDesignServices,
+    language: "Web / App Design",
+    technologies: "Figma",
   },
 ];
 
