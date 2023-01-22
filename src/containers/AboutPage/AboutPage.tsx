@@ -34,10 +34,13 @@ const AboutPage: FC = () => {
               Hey, It's me!
             </h3>
             <p className="about__biography__description__text">
-              Hi! I'm Martin Meneghetti. I started my journey as developer on
-              December 2019 when I made my first website at school and after
-              that I studied programming every day. I enjoy coding and I really
-              like the power behind technologies.
+              Welcome to my personal website, where I showcase my programming
+              projects and passion for coding. My journey as a developer began
+              in December 2019, when I created my first website in school. From
+              that moment on, I dedicated myself to studying programming every
+              day. I am constantly inspired by the endless possibilities and
+              power that technology holds, and I am thrilled to share my work
+              with you.
             </p>
           </div>
           <div className="about__biography__description__section">
@@ -45,15 +48,19 @@ const AboutPage: FC = () => {
               My Journey
             </h3>
             <p className="about__biography__description__text">
-              I Started from HTML exploring the world of web development and I
-              learnt so much about the core concepts of websites and learning
-              Javascript allowed me to become a MERN developer. Then I learnt
-              Flutter because I believe that it is the future of app development
-              and now I use it to create mobile apps and desktop apps. I made
-              some apps for local companies like the Proloco of Castelfranco
-              Veneto which needed an app to encourage tourism in the city. I
-              also participated in the Italian Computer Science Olympics 2021
-              arriving 121°.
+              My adventure began with HTML, where I discovered the core concepts
+              of websites and the endless possibilities they held. I then delved
+              deeper into the world of Javascript, which allowed me to learn
+              technologies like React and NodeJs. I also had the opportunity to
+              showcase my skills by participating in the Italian Computer
+              Science Olympics 2021, where I placed 121st. My passion for
+              technology led me to explore new frontiers, and I discovered the
+              future of app development with Flutter. I've used this powerful
+              tool to create mobile and desktop apps for local companies like
+              the Proloco of Castelfranco Veneto, who needed an app to encourage
+              tourism in the city. Currently, I am working as a software
+              developer for a startup in Milan and I am always looking for new
+              challenges to improve my skills and create innovative solutions.
             </p>
           </div>
           <div className="about__biography__description__section about__biography__general-info">

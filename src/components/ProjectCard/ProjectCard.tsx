@@ -13,12 +13,20 @@ interface ProjectCardProps {
   typeIcon: IconType;
   isComingSoon?: boolean;
   sourceCodeLink?: string;
+  isMobileApp?: boolean;
+  storeLink?: string;
 }
 
 const projectCard: FC<ProjectCardProps> = props => {
-  const button = (
+  const websiteLinkButton = (
     <a className="project-card__link btn" href={props.link}>
       <span>Visit Website</span>
+    </a>
+  );
+
+  const mobileStoresButtons = (
+    <a className="project-card__link btn" href={props.storeLink}>
+      <span>See On Play Store</span>
     </a>
   );
 
@@ -30,7 +38,7 @@ const projectCard: FC<ProjectCardProps> = props => {
   );
 
   const actions = () => {
-    let component = button;
+    let component = websiteLinkButton;
 
     if (props.isComingSoon) {
       component = (
@@ -53,7 +61,7 @@ const projectCard: FC<ProjectCardProps> = props => {
             <span>Source Code</span>
           </a>
           <span className="project-card__divider"></span>
-          {button}
+          {props.isMobileApp ? mobileStoresButtons : websiteLinkButton}
         </div>
       );
     } else {
@@ -61,7 +69,7 @@ const projectCard: FC<ProjectCardProps> = props => {
         <div className="project-card__links">
           {privateCodeButton}
           <span className="project-card__divider"></span>
-          {button}
+          {props.isMobileApp ? mobileStoresButtons : websiteLinkButton}
         </div>
       );
     }

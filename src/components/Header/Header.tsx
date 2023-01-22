@@ -59,7 +59,7 @@ const Header: FC<HeaderProps> = props => {
       <div className="header__logo">
         <NavLink to="/" className="header__logo__brand">
           <img src={LogoImg} className="header__logo__img" alt="logo" />
-          MyPortfolio
+          My Portfolio
         </NavLink>
       </div>
       <div className="header__nav">

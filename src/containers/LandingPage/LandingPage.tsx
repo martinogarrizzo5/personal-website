@@ -20,9 +20,10 @@ const LandingPage: FC = () => {
             <br />A Full-Stack Developer and Designer
           </h1>
           <p className="landing__header__sub-title">
-            Need a developer? Stop searching. I'm the person you are looking
-            for. Just let me show you the projects I made and I'll promise
-            you'll be convinced
+            Are you in search of a top-notch developer? Look no further! I am
+            the solution to your needs. Allow me to showcase my portfolio of
+            projects and I guarantee you will be impressed with my skills and
+            expertise
             <br />
           </p>
           <NavLink to="/projects" className="landing__header__cta btn">

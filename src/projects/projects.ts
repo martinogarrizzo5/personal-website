@@ -35,6 +35,8 @@ type Project = {
   link: string;
   isComingSoon?: boolean;
   sourceCodeLink?: string;
+  isMobileApp?: boolean;
+  storeLink?: string;
 };
 
 const projects: Project[] = [
@@ -55,6 +57,18 @@ const projects: Project[] = [
     description:
       "Find activities and hotels into the most beautiful places in the world and live experiences that you'll never forget.",
     link: "https://dream-travel.herokuapp.com/",
+    isComingSoon: true,
+  },
+  {
+    typeIcon: FaBrain,
+    type: "Culture",
+    title: "Castelturismo",
+    imageUrl: castelturismoImg,
+    description:
+      "Guide for tourism in Castelfranco Veneto among mansions and historic buildings.",
+    link: "",
+    sourceCodeLink: "https://github.com/martinogarrizzo5/castelturismo",
+    isMobileApp: true,
   },
   {
     typeIcon: FaCocktail,
@@ -66,17 +80,7 @@ const projects: Project[] = [
     link: "https://drytea.web.app",
     sourceCodeLink: "https://github.com/martinogarrizzo5/dry-tea",
   },
-  {
-    typeIcon: FaBrain,
-    type: "Culture",
-    title: "Castelturismo",
-    imageUrl: castelturismoImg,
-    description:
-      "Guide for tourism in Castelfranco Veneto among the mansions and historic buildings.",
-    link: "",
-    sourceCodeLink: "https://github.com/martinogarrizzo5/castelturismo",
-    isComingSoon: true,
-  },
+
   {
     typeIcon: FaStickyNote,
     type: "Notes",
