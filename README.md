@@ -1,7 +1,5 @@
 # My personal website
 
-Latest version of my website made with React
-
-[Live Website](https://martin-meneghetti.web.app/)
+Old version of my website made with React
 
 ![preview](website-preview.png)
